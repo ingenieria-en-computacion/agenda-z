@@ -114,9 +114,10 @@ void guardar_contactos(char *filename, Agenda agenda){
 
 // Arreglos de strings para imprimir enums
 char *mesesStr[] = {
-    "Enero","Febrero","Marzo","Abril","Mayo","Junio",
-    "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+    "ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO",
+    "JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE"
 };
+
 
 char *tiposTelStr[] = {"Casa","Movil","Oficina","Otro"};
 char *tiposContactoStr[] = {"Amigo","Conocido","Laboral"};
@@ -226,7 +227,7 @@ void leer_contacto(Contacto *c){
     printf("Dia de nacimiento: ");
     scanf("%d", &c->diaNacimiento);
 
-    printf("Mes de nacimiento (1-12): ");
+   printf("Mes de nacimiento (en mayuscula completo): ");
     scanf("%d", &mes);
     c->mesNacimiento = mes - 1;
 
